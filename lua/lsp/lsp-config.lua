@@ -1,3 +1,5 @@
-local lspconfig = require "lspconfig"
+local lspconfig = require("lspconfig")
 
-require'lspconfig'.tsserver.setup{}
+lspconfig.lua_ls.setup({})
+lspconfig.tsserver.setup({})
+lspconfig.dartls.setup({})

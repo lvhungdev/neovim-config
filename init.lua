@@ -1,6 +1,8 @@
 require "options"
 require "keymaps"
 require "plugins"
+require "git"
+require "terminal"
 
 require "ui/colorscheme"
 require "ui/statusline"

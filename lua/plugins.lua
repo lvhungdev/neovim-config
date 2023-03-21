@@ -54,17 +54,19 @@ return packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use "Mofiqul/vscode.nvim"
   use "nvim-tree/nvim-tree.lua"
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use "kazhala/close-buffers.nvim"
   use {
-      'numToStr/Comment.nvim',
-      config = function()
-          require('Comment').setup()
-      end
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
   }
   use { "nvim-lualine/lualine.nvim", requires = { 'nvim-tree/nvim-web-devicons', opt = true }, }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "nvim-telescope/telescope.nvim", branch = "0.1.x" }
+  use "akinsho/toggleterm.nvim"
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

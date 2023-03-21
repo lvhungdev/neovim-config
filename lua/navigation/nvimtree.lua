@@ -29,14 +29,15 @@ require("nvim-tree").setup({
       resize_window = true,
     },
   },
+  diagnostics = {
+    enable = true
+  },
   renderer = {
-    highlight_git = false,
+    highlight_git = true,
     highlight_opened_files = "none",
-
     indent_markers = {
       enable = false,
     },
-
     icons = {
       show = {
         file = true,
@@ -44,7 +45,6 @@ require("nvim-tree").setup({
         folder_arrow = true,
         git = false,
       },
-
       glyphs = {
         default = "",
         symlink = "",

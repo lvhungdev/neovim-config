@@ -46,6 +46,8 @@ keymap("n", ">", ">gv", opts)
 -- Comment
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true })
 
+keymap("n", "<leader>`", ":ToggleTerm direction=horizontal<CR>", opts)
+
 --- INSERT ---
 
 --- VISUAL ---
@@ -70,6 +72,9 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+--- TERMINAL ---
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], { buffer = 0 })
+
 --- LSP ---
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
@@ -92,3 +97,9 @@ vim.keymap.set(
   end,
   opts
 )
+
+--- GIT ---
+keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)
+keymap("n", "<leader>gb", ":Gitsigns blame_line<CR>", opts)
+keymap("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", opts)
+keymap("n", "<leader>gR", ":Gitsigns reset_buffer<CR>", opts)
