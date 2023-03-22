@@ -6,6 +6,7 @@ require "terminal"
 
 require "ui/colorscheme"
 require "ui/statusline"
+require "ui/indent-blankline-config"
 
 require "navigation/nvimtree"
 require "navigation/bufferlinenvim"
@@ -16,3 +17,4 @@ require "lsp/lsp-config"
 require "lsp/mason-config"
 require "lsp/null-ls-config"
 require "lsp/auto-cmp"
+require "lsp/dap-config"
