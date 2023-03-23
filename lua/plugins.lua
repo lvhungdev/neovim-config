@@ -46,6 +46,7 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "mfussenegger/nvim-dap"
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use "jose-elias-alvarez/null-ls.nvim"
   use "nvim-lua/plenary.nvim"
   use "hrsh7th/nvim-cmp"
@@ -74,6 +75,7 @@ return packer.startup(function(use)
       require("nvim-autopairs").setup()
     end
   }
+  use "petertriho/nvim-scrollbar"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -7,6 +7,7 @@ require "terminal"
 require "ui/colorscheme"
 require "ui/statusline"
 require "ui/indent-blankline-config"
+require "ui/scroll-bar"
 
 require "navigation/nvimtree"
 require "navigation/bufferlinenvim"
