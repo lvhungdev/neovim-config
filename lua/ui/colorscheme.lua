@@ -1,4 +1,8 @@
-local colorscheme = "vscode"
+require('onedark').setup {
+    style = 'warm'
+}
+
+local colorscheme = "onedark"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
