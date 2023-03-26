@@ -1,5 +1,5 @@
 local term = require("toggleterm")
 
 term.setup({
-  open_mapping = [[<leader>`]]
+  open_mapping = [[<M-t>]]
 })

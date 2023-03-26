@@ -15,7 +15,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
+-- Autocommand that reloads neovim whenever you save the general/plugin-config.lua file
 vim.cmd [[
   augroup packer_user_config
     autocmd!
@@ -40,38 +40,47 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-    -- My plugins here
     use "wbthomason/packer.nvim" -- Have packer manage itself
+
+    -- Utils
+    use "nvim-lua/plenary.nvim"
+
+    -- General
+    use "lewis6991/gitsigns.nvim"
+    use "akinsho/toggleterm.nvim"
+
+    -- Lsp
     use "neovim/nvim-lspconfig"
     use "williamboman/mason.nvim"
     use "williamboman/mason-lspconfig.nvim"
     use "mfussenegger/nvim-dap"
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
     use "jose-elias-alvarez/null-ls.nvim"
-    use "nvim-lua/plenary.nvim"
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-nvim-lsp"
     use "saadparwaiz1/cmp_luasnip"
     use "L3MON4D3/LuaSnip"
-    use "Mofiqul/vscode.nvim"
-    use "navarasu/onedark.nvim"
-    use "nvim-tree/nvim-tree.lua"
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
-    use "kazhala/close-buffers.nvim"
+    use "windwp/nvim-autopairs"
+    use "lukas-reineke/indent-blankline.nvim"
     use {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
         end
     }
+
+    -- UI
+    use "Mofiqul/vscode.nvim"
+    use "navarasu/onedark.nvim"
     use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true }, }
+    use "petertriho/nvim-scrollbar"
+
+    -- Navigation
+    use "nvim-tree/nvim-tree.lua"
+    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+    use "kazhala/close-buffers.nvim"
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     use { "nvim-telescope/telescope.nvim", branch = "0.1.x" }
-    use "akinsho/toggleterm.nvim"
-    use "lewis6991/gitsigns.nvim"
-    use "lukas-reineke/indent-blankline.nvim"
-    use "windwp/nvim-autopairs"
-    use "petertriho/nvim-scrollbar"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
