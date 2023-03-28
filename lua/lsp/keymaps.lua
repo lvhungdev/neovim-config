@@ -1,3 +1,6 @@
+local opts = { noremap = true, silent = true }
+
+-- LSP
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 vim.keymap.set("n", "gd", ":Telescope lsp_definitions<CR>", opts)
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
@@ -19,3 +22,11 @@ vim.keymap.set(
     end,
     opts
 )
+
+-- DAP
+local dapui = require("dapui")
+local dap = require("dap")
+vim.keymap.set("n", "<leader>dU", dapui.toggle, opts)
+vim.keymap.set("n", "<leader>ds", dap.continue, opts)
+vim.keymap.set("n", "<leader>dS", dap.terminate, opts)
+vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint, opts)

@@ -56,8 +56,8 @@ cmp.setup {
         -- { name = 'luasnip' },
     },
     performance = {
-        trigger_debounce_time = 500,
-        throttle = 550,
+        trigger_debounce_time = 400,
+        throttle = 500,
         fetching_timeout = 80,
     },
 }
