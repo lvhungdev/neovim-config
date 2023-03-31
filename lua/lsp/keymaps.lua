@@ -22,6 +22,20 @@ vim.keymap.set(
     end,
     opts
 )
+vim.keymap.set(
+    "v",
+    "<leader>lf",
+    function()
+        vim.lsp.buf.format {
+            async = true,
+            range = {
+                ["start"] = vim.api.nvim_buf_get_mark(0, "<"),
+                ["end"] = vim.api.nvim_buf_get_mark(0, ">"),
+            }
+        }
+    end,
+    opts
+)
 
 -- DAP
 local dapui = require("dapui")

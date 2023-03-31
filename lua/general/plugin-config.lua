@@ -19,7 +19,7 @@ end
 vim.cmd [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost general/plugin-config.lua source <afile> | PackerSync
   augroup end
 ]]
 
@@ -62,17 +62,12 @@ return packer.startup(function(use)
     use "L3MON4D3/LuaSnip"
     use "windwp/nvim-autopairs"
     use "lukas-reineke/indent-blankline.nvim"
-    use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
+    use "tpope/vim-commentary"
 
     -- UI
     use "Mofiqul/vscode.nvim"
     use "navarasu/onedark.nvim"
-    use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true }, }
+    use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons" }, }
     use "petertriho/nvim-scrollbar"
 
     -- Navigation
