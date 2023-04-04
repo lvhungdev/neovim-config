@@ -56,3 +56,6 @@ keymap("n", "<leader>gR", ":Gitsigns reset_buffer<CR>", opts)
 -- Comment
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true })
+
+-- Terminal
+vim.keymap.set("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { noremap = true })

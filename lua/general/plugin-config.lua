@@ -65,7 +65,6 @@ return packer.startup(function(use)
     use "tpope/vim-commentary"
 
     -- UI
-    use "Mofiqul/vscode.nvim"
     use "navarasu/onedark.nvim"
     use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons" }, }
     use "petertriho/nvim-scrollbar"
