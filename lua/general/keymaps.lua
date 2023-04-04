@@ -15,6 +15,14 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Better copy and paste
+keymap("n", "d", '"_d', opts)
+keymap("n", "D", '"_D', opts)
+keymap("n", "dd", '"_dd', opts)
+keymap("n", "dd", '"_dd', opts)
+keymap("v", "d", '"_d', opts)
+keymap("v", "p", '"_dP', opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
