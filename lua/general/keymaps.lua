@@ -16,9 +16,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Better copy and paste
+keymap("n", "c", '"_c', opts)
+keymap("n", "C", '"_C', opts)
 keymap("n", "d", '"_d', opts)
 keymap("n", "D", '"_D', opts)
-keymap("n", "dd", '"_dd', opts)
 keymap("n", "dd", '"_dd', opts)
 keymap("v", "d", '"_d', opts)
 keymap("v", "p", '"_dP', opts)
