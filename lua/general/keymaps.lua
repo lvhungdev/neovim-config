@@ -68,3 +68,4 @@ vim.keymap.set("v", "<leader>/", "gc", { remap = true })
 
 -- Terminal
 vim.keymap.set("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { noremap = true })
+vim.keymap.set("t", "<C-\\>", "<C-\\><C-n>", { noremap = true })

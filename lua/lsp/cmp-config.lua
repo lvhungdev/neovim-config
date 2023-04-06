@@ -52,17 +52,20 @@ cmp.setup {
         -- end, { 'i', 's' }),
     }),
     sources = {
-        { name = 'nvim_lsp', keyword_length = 3 },
+        {
+            name = 'nvim_lsp',
+            -- keyword_length = 3
+        },
         -- { name = 'luasnip' },
     },
-    performance = {
-        trigger_debounce_time = 300,
-        throttle = 300,
-        fetching_timeout = 80,
-    },
+    -- performance = {
+    --     trigger_debounce_time = 300,
+    --     throttle = 300,
+    --     fetching_timeout = 80,
+    -- },
 }
 
 -- Auto pairs --
-require("nvim-autopairs").setup({
+require('nvim-autopairs').setup({
     check_ts = true,
 })

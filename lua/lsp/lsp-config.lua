@@ -24,3 +24,7 @@ lspconfig.omnisharp.setup({
 })
 
 lspconfig.intelephense.setup({})
+
+lspconfig.rust_analyzer.setup({
+    cmd = { "C:/Users/lvhu/AppData/Local/nvim-data/mason/packages/rust-analyzer/rust-analyzer" }
+})
