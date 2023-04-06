@@ -15,6 +15,8 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+keymap("n", "U", "<C-r>", opts)
+
 -- Better copy and paste
 keymap("n", "c", '"_c', opts)
 keymap("n", "C", '"_C', opts)
