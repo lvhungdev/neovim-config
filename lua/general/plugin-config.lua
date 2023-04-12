@@ -66,12 +66,13 @@ return packer.startup(function(use)
 
     -- UI
     use "navarasu/onedark.nvim"
+    use "folke/tokyonight.nvim"
     use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons" }, }
     use "petertriho/nvim-scrollbar"
 
     -- Navigation
     use "nvim-tree/nvim-tree.lua"
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+    use { "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" }
     use "kazhala/close-buffers.nvim"
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     use { "nvim-telescope/telescope.nvim", branch = "0.1.x" }
