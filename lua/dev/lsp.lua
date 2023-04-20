@@ -11,3 +11,5 @@ lspconfig.dartls.setup({
         }
     }
 })
+
+lspconfig.rust_analyzer.setup({})

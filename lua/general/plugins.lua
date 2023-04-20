@@ -1,19 +1,20 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- UI
     { "folke/tokyonight.nvim", lazy = true },
+    { "catppuccin/nvim",       name = "catppuccin", lazy = true },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
@@ -73,6 +74,7 @@ require("lazy").setup({
     { "tpope/vim-commentary" },
     {
         "RRethy/vim-illuminate",
-        config = function() require("illuminate").configure(require("dev/illuminate")) end,
+        config = function() require("illuminate").configure(require("dev/highlight")) end,
     },
+    { "github/copilot.vim" },
 })
