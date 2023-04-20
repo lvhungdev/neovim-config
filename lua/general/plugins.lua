@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- UI
     { "folke/tokyonight.nvim", lazy = true },
-    { "catppuccin/nvim",       name = "catppuccin", lazy = true },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
@@ -60,6 +59,9 @@ require("lazy").setup({
     {
         "williamboman/mason-lspconfig.nvim",
         config = function() require("mason-lspconfig").setup({}) end,
+    },
+    {
+        "jose-elias-alvarez/null-ls.nvim",
     },
     { "hrsh7th/nvim-cmp" },
     {
