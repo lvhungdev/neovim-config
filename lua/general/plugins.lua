@@ -12,9 +12,16 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- General
+    {
+        "echasnovski/mini.surround",
+        version = "*",
+        config = function() require("mini.surround").setup({}) end,
+    },
+
     -- UI
     { "folke/tokyonight.nvim", lazy = true },
-    { "Mofiqul/vscode.nvim", lazy = true },
+    { "Mofiqul/vscode.nvim",   lazy = true },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
@@ -30,6 +37,14 @@ require("lazy").setup({
         version = "*",
         config = function() require("mini.indentscope").setup(require("ui/indent")) end,
         enabled = false
+    },
+    {
+        "petertriho/nvim-scrollbar",
+        config = function() require("scrollbar").setup(require("ui/scroll-bar")) end,
+    },
+    {
+        "stevearc/dressing.nvim",
+        config = function() require("dressing").setup({}) end,
     },
 
     -- Navigation
