@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- UI
     { "folke/tokyonight.nvim", lazy = true },
-    { "bluz71/vim-moonfly-colors", lazy = true, name = "moonfly" },
+    { "Mofiqul/vscode.nvim", lazy = true },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
