@@ -1,17 +1,17 @@
-local cmp = require 'cmp'
+local cmp = require "cmp"
 
-cmp.setup {
+cmp.setup ({
     -- snippet = {
     --     expand = function(args)
     --         luasnip.lsp_expand(args.body)
     --     end,
     -- },
     mapping = cmp.mapping.preset.insert({
-        ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
-        ['<C-d>'] = cmp.mapping.scroll_docs(4),  -- Down
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4), -- Up
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),  -- Down
         -- C-b (back) C-f (forward) for snippet placeholder navigation.
         -- ['<C-]>'] = cmp.mapping.complete(),
-        ['<CR>'] = cmp.mapping.confirm {
+        ["<CR>"] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
         },
@@ -36,7 +36,7 @@ cmp.setup {
     }),
     sources = {
         {
-            name = 'nvim_lsp',
+            name = "nvim_lsp",
             -- keyword_length = 3
         },
         -- { name = 'luasnip' },
@@ -46,4 +46,4 @@ cmp.setup {
     --     throttle = 300,
     --     fetching_timeout = 80,
     -- },
-}
+})

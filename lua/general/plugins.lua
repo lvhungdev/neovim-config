@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- UI
     { "folke/tokyonight.nvim", lazy = true },
+    { "bluz71/vim-moonfly-colors", lazy = true, name = "moonfly" },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
@@ -64,6 +65,7 @@ require("lazy").setup({
         "jose-elias-alvarez/null-ls.nvim",
     },
     { "hrsh7th/nvim-cmp" },
+    { "hrsh7th/cmp-nvim-lsp" },
     {
         "lewis6991/gitsigns.nvim",
         config = function() require("gitsigns").setup(require("dev/git")) end,
