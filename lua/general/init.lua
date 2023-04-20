@@ -1,5 +1,4 @@
-require("general/plugin-config")
-require("general/options")
-require("general/keymaps")
-require("general/git-config")
-require("general/terminal-config")
+require "general/keymaps"
+require "general/plugins"
+require "general/options"
+require "general/utils"

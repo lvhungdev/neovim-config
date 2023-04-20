@@ -1,4 +1,4 @@
-require("general/init")
-require("lsp/init")
-require("ui/init")
-require("navigation/init")
+require "general"
+require "ui"
+require "navigation"
+require "dev"

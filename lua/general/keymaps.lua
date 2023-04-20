@@ -2,15 +2,14 @@
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
---   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
 
 local opts = { noremap = true, silent = true }
 
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
---Remap space as leader key
+-- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -32,9 +31,9 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Better buffer navigation
 keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
-keymap("n", "<leader>q", ":BDelete this<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -70,4 +69,4 @@ vim.keymap.set("v", "<leader>/", "gc", { remap = true })
 
 -- Terminal
 vim.keymap.set("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { noremap = true })
-vim.keymap.set("t", "<C-\\>", "<C-\\><C-n>", { noremap = true })
+vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>", { noremap = true })
