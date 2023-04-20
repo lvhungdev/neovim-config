@@ -28,6 +28,7 @@ require("lazy").setup({
         "echasnovski/mini.indentscope",
         version = "*",
         config = function() require("mini.indentscope").setup(require("ui/indent")) end,
+        enabled = false
     },
 
     -- Navigation
