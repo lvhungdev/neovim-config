@@ -15,6 +15,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 keymap("n", "U", "<C-r>", opts)
+keymap("n", "gh", "0", opts)
+keymap("n", "gl", "$", opts)
+keymap("n", "ge", "<S-g>", opts)
+keymap("v", "gh", "0", opts)
+keymap("v", "gl", "$", opts)
+keymap("v", "ge", "<S-g>", opts)
 
 -- Better copy and paste
 keymap("n", "c", '"_c', opts)

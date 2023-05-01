@@ -13,6 +13,6 @@ local keymap = vim.keymap.set
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>q", ":BDelete this<cr>", opts)
 
-keymap('n', '<leader>sf', ":Telescope find_files<cr>", {})
-keymap('n', '<leader>st', ":Telescope live_grep<cr>", {})
-keymap('n', '<leader>sd', ":Telescope diagnostics<cr>", {})
+keymap('n', '<leader>f', ":Telescope find_files<cr>", {})
+keymap('n', '<leader>t', ":Telescope live_grep<cr>", {})
+keymap('n', '<leader>d', ":Telescope diagnostics<cr>", {})

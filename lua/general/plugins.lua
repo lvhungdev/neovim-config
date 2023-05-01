@@ -20,7 +20,6 @@ require("lazy").setup({
     },
 
     -- UI
-    { "folke/tokyonight.nvim", lazy = true },
     { "Mofiqul/vscode.nvim",   lazy = true },
     {
         "nvim-treesitter/nvim-treesitter",
@@ -95,5 +94,5 @@ require("lazy").setup({
         "RRethy/vim-illuminate",
         config = function() require("illuminate").configure(require("dev/highlight")) end,
     },
-    { "github/copilot.vim" },
+    -- { "github/copilot.vim" },
 })
