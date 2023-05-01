@@ -20,7 +20,7 @@ require("lazy").setup({
     },
 
     -- UI
-    { "Mofiqul/vscode.nvim",   lazy = true },
+    { "Mofiqul/vscode.nvim",                lazy = true },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
@@ -29,7 +29,7 @@ require("lazy").setup({
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function() require("lualine").setup({}) end,
+        config = function() require("ui/statusline") end,
     },
     {
         "echasnovski/mini.indentscope",
