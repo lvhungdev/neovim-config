@@ -38,8 +38,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Better buffer navigation
-keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
-keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<S-l>", ":BufferNext<CR>", opts)
+keymap("n", "<S-h>", ":BufferPrevious<CR>", opts)
+keymap("n", "<M-l>", ":BufferMoveNext<CR>", opts)
+keymap("n", "<M-h>", ":BufferMovePrevious<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)

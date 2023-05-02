@@ -20,7 +20,7 @@ require("lazy").setup({
     },
 
     -- UI
-    { "Mofiqul/vscode.nvim",                lazy = true },
+    { "Mofiqul/vscode.nvim", lazy = true },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
@@ -39,7 +39,7 @@ require("lazy").setup({
     },
     {
         "petertriho/nvim-scrollbar",
-        config = function() require("scrollbar").setup(require("ui/scroll-bar")) end,
+        config = function() require("scrollbar").setup(require("ui/scroll_bar")) end,
     },
     {
         "stevearc/dressing.nvim",
@@ -52,13 +52,22 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function() require("nvim-tree").setup(require("navigation/file-tree")) end,
     },
+    -- {
+    --     "akinsho/bufferline.nvim",
+    --     version = "v3.*",
+    --     dependencies = { "nvim-tree/nvim-web-devicons" },
+    --     config = function() require("bufferline").setup(require("navigation/buffer")) end,
+    -- },
     {
-        "akinsho/bufferline.nvim",
-        version = "v3.*",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function() require("bufferline").setup(require("navigation/buffer")) end,
+        "romgrk/barbar.nvim",
+        dependencies = {
+            "lewis6991/gitsigns.nvim",
+            "nvim-tree/nvim-web-devicons",
+        },
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = require("navigation/buffer"),
     },
-    { "kazhala/close-buffers.nvim" },
+    -- { "kazhala/close-buffers.nvim" },
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.1",
