@@ -33,12 +33,6 @@ require("lazy").setup({
         config = function() require("ui/statusline") end,
     },
     {
-        "echasnovski/mini.indentscope",
-        version = "*",
-        config = function() require("mini.indentscope").setup(require("ui/indent")) end,
-        enabled = false
-    },
-    {
         "petertriho/nvim-scrollbar",
         config = function() require("scrollbar").setup(require("ui/scroll_bar")) end,
     },
@@ -53,12 +47,6 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function() require("nvim-tree").setup(require("navigation/file-tree")) end,
     },
-    -- {
-    --     "akinsho/bufferline.nvim",
-    --     version = "v3.*",
-    --     dependencies = { "nvim-tree/nvim-web-devicons" },
-    --     config = function() require("bufferline").setup(require("navigation/buffer")) end,
-    -- },
     {
         "romgrk/barbar.nvim",
         dependencies = {
@@ -89,7 +77,7 @@ require("lazy").setup({
     {
         "jose-elias-alvarez/null-ls.nvim",
     },
-    { "hrsh7th/nvim-cmp" },
+    { "hrsh7th/nvim-cmp",    commit = "d00d78fa3fea57755dfd7701745875f5a8062145" },
     { "hrsh7th/cmp-nvim-lsp" },
     {
         "lewis6991/gitsigns.nvim",
