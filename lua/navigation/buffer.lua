@@ -44,7 +44,7 @@ return {
         modified = { button = "●" },
         pinned = { button = "車", filename = true, separator = { right = "" } },
         alternate = { filetype = { enabled = false } },
-        current = { buffer_index = true },
+        current = { buffer_index = false },
         inactive = { button = "" },
         visible = { modified = { buffer_number = false } },
     },

@@ -60,7 +60,6 @@ require("lazy").setup({
         init = function() vim.g.barbar_auto_setup = false end,
         opts = require("navigation/buffer"),
     },
-    -- { "kazhala/close-buffers.nvim" },
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.1",

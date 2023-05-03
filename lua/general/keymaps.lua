@@ -72,9 +72,9 @@ keymap("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", opts)
 keymap("n", "<leader>gR", ":Gitsigns reset_buffer<CR>", opts)
 
 -- Comment
-vim.keymap.set("n", "<leader>/", "gcc", { remap = true })
-vim.keymap.set("v", "<leader>/", "gc", { remap = true })
+keymap("n", "<C-c>", "gcc", { remap = true })
+keymap("v", "<C-c>", "gc", { remap = true })
 
 -- Terminal
-vim.keymap.set("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { noremap = true })
-vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>", { noremap = true })
+keymap("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { noremap = true })
+keymap("t", "<esc><esc>", "<C-\\><C-n>", { noremap = true })
