@@ -82,6 +82,7 @@ require("lazy").setup({
     },
     { "hrsh7th/nvim-cmp",    commit = "d00d78fa3fea57755dfd7701745875f5a8062145" },
     { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/cmp-nvim-lsp-signature-help" },
     {
         "lewis6991/gitsigns.nvim",
         config = function() require("gitsigns").setup(require("dev/git")) end,
