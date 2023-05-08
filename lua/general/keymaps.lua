@@ -72,8 +72,8 @@ keymap("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", opts)
 keymap("n", "<leader>gR", ":Gitsigns reset_buffer<CR>", opts)
 
 -- Comment
-keymap("n", "<C-c>", "gcc", { remap = true })
-keymap("v", "<C-c>", "gc", { remap = true })
+keymap("n", "<leader>/", "gcc", { remap = true })
+keymap("v", "<leader>/", "gc", { remap = true })
 
 -- Terminal
 keymap("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { noremap = true })
