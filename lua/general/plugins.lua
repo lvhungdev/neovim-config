@@ -84,6 +84,10 @@ require("lazy").setup({
     { "hrsh7th/cmp-nvim-lsp" },
     { "hrsh7th/cmp-nvim-lsp-signature-help" },
     {
+        "rcarriga/nvim-dap-ui",
+        dependencies = { "mfussenegger/nvim-dap" },
+    },
+    {
         "lewis6991/gitsigns.nvim",
         config = function() require("gitsigns").setup(require("dev/git")) end,
     },
@@ -92,7 +96,6 @@ require("lazy").setup({
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup({}) end,
     },
-    -- { "tpope/vim-commentary" },
     {
         "numToStr/Comment.nvim",
         config = function() require("Comment").setup({}) end,

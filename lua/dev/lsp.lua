@@ -15,3 +15,5 @@ lspconfig.dartls.setup({
 lspconfig.rust_analyzer.setup({})
 
 lspconfig.tsserver.setup({})
+
+lspconfig.clangd.setup({})
