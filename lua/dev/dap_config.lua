@@ -74,33 +74,44 @@ dapui.setup({
         current_frame = "",
         expanded = ""
     },
-    layouts = { {
-        elements = { {
-            id = "scopes",
-            size = 0.50
-        }, {
-            id = "breakpoints",
-            size = 0.1
-        }, {
-            id = "stacks",
-            size = 0.1
-        }, {
-            id = "watches",
-            size = 0.3
-        } },
-        position = "left",
-        size = 60
-    }, {
-        elements = { {
-            id = "repl",
-            size = 0.4
-        }, {
-            id = "console",
-            size = 0.6
-        } },
-        position = "bottom",
-        size = 12
-    } },
+    layouts = {
+        {
+            elements = {
+                {
+                    id = "scopes",
+                    size = 0.50
+                },
+                {
+                    id = "watches",
+                    size = 0.3
+                },
+                {
+                    id = "breakpoints",
+                    size = 0.1
+                },
+                {
+                    id = "stacks",
+                    size = 0.1
+                },
+            },
+            position = "left",
+            size = 60
+        },
+        {
+            elements = {
+                {
+                    id = "repl",
+                    size = 0.4
+                },
+                {
+                    id = "console",
+                    size = 0.6
+                }
+            },
+            position = "bottom",
+            size = 12
+        }
+    },
     mappings = {
         edit = "e",
         expand = { "o", "<2-LeftMouse>" },
