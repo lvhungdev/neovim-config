@@ -26,7 +26,12 @@ require("lazy").setup({
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
     },
-    { "lukas-reineke/indent-blankline.nvim" },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        opts = {
+            show_current_context = true,
+        },
+    },
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -40,10 +45,6 @@ require("lazy").setup({
         "stevearc/dressing.nvim",
         config = function() require("dressing").setup({}) end,
     },
-    -- {
-    --     "j-hui/fidget.nvim",
-    --     config = function() require("fidget").setup({}) end,
-    -- },
 
     -- Navigation
     {
