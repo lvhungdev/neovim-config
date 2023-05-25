@@ -28,9 +28,7 @@ require("lazy").setup({
     },
     {
         "lukas-reineke/indent-blankline.nvim",
-        opts = {
-            show_current_context = true,
-        },
+        opts = require("ui/indentation")
     },
     {
         "nvim-lualine/lualine.nvim",
