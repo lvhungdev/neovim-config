@@ -1,23 +1,5 @@
 local dap = require("dap")
 
-dap.adapters.cppdbg = {
-    id = "cppdbg",
-    type = "executable",
-    command = "/home/lvhu/.local/share/nvim/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7"
-}
-dap.configurations.cpp = {
-    {
-        name = "Launch file",
-        type = "cppdbg",
-        request = "launch",
-        program = function()
-            return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-        end,
-        cwd = "${workspaceFolder}",
-        stopAtEntry = true,
-    },
-}
-
 dap.adapters.codelldb = {
     type = "server",
     port = "${port}",
@@ -28,6 +10,7 @@ dap.adapters.codelldb = {
         -- detached = false,
     }
 }
+
 dap.configurations.rust = {
     {
         name = "Launch file",
@@ -35,6 +18,19 @@ dap.configurations.rust = {
         request = "launch",
         program = function()
             return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug/", "file")
+        end,
+        cwd = "${workspaceFolder}",
+        stopOnEntry = false,
+    },
+}
+
+dap.configurations.cpp = {
+    {
+        name = "Launch file",
+        type = "codelldb",
+        request = "launch",
+        program = function()
+            return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/build/", "file")
         end,
         cwd = "${workspaceFolder}",
         stopOnEntry = false,
