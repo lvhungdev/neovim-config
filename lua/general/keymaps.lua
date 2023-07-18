@@ -77,4 +77,4 @@ keymap("v", "<leader>/", "gc", { remap = true })
 
 -- Terminal
 keymap("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { noremap = true })
-keymap("t", "<esc><esc>", "<C-\\><C-n>", { noremap = true })
+keymap("t", "<C-x>", "<C-\\><C-n>", { noremap = true })

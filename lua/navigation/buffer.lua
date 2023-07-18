@@ -8,7 +8,8 @@ return {
     icons = {
         buffer_index = false,
         buffer_number = false,
-        button = "",
+        -- button = "",
+        button = "",
         diagnostics = {
             [vim.diagnostic.severity.ERROR] = { enabled = true, icon = "E" },
             [vim.diagnostic.severity.WARN] = { enabled = true, icon = "W" },
