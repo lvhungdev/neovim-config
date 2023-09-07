@@ -1,7 +1,7 @@
 local term = require('toggleterm')
 
 term.setup({
-    -- open_mapping = [[<M-t>]]
+    open_mapping = [[<M-1>]]
 })
 
 local Terminal = require('toggleterm.terminal').Terminal
