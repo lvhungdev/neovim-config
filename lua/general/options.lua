@@ -32,5 +32,6 @@ vim.opt.scrolloff = 8              -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
+vim.opt.laststatus=3
 
 vim.g.barbar_auto_setup = false -- disable auto-setup for barbar.nvim
