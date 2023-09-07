@@ -76,12 +76,15 @@ require("lazy").setup({
         "williamboman/mason-lspconfig.nvim",
         config = function() require("mason-lspconfig").setup({}) end,
     },
+    { "jose-elias-alvarez/null-ls.nvim" },
     {
-        "jose-elias-alvarez/null-ls.nvim",
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-nvim-lsp-signature-help",
+            "L3MON4D3/LuaSnip",
+        },
     },
-    { "hrsh7th/nvim-cmp",                   commit = "d00d78fa3fea57755dfd7701745875f5a8062145" },
-    { "hrsh7th/cmp-nvim-lsp" },
-    { "hrsh7th/cmp-nvim-lsp-signature-help" },
     {
         "rcarriga/nvim-dap-ui",
         dependencies = { "mfussenegger/nvim-dap" },
