@@ -51,12 +51,12 @@ require("lazy").setup({
         config = function() require("nvim-tree").setup(require("navigation/file-tree")) end,
     },
     {
-        "romgrk/barbar.nvim",
+        "akinsho/bufferline.nvim",
+        version = "*",
         dependencies = {
-            "lewis6991/gitsigns.nvim",
             "nvim-tree/nvim-web-devicons",
+            "ojroques/nvim-bufdel",
         },
-        init = function() vim.g.barbar_auto_setup = false end,
         opts = require("navigation/buffer"),
     },
     {

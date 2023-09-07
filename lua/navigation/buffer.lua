@@ -1,49 +1,21 @@
 return {
-    animation = false,
-    auto_hide = false,
-    tabpages = false,
-    clickable = true,
-    focus_on_close = "left",
-    highlight_visible = true,
-    icons = {
-        buffer_index = false,
-        buffer_number = false,
-        -- button = "",
-        button = "",
-        diagnostics = {
-            [vim.diagnostic.severity.ERROR] = { enabled = true, icon = "E" },
-            [vim.diagnostic.severity.WARN] = { enabled = true, icon = "W" },
-            [vim.diagnostic.severity.INFO] = { enabled = true, icon = "I" },
-            [vim.diagnostic.severity.HINT] = { enabled = true, icon = "H" },
+    options = {
+        always_show_bufferline = true,
+        max_name_length = 30,
+        offsets = {
+            {
+                filetype = "NvimTree",
+                text = "File Explorer",
+                text_align = "center"
+            }
         },
-        gitsigns = {
-            added = { enabled = false },
-            changed = { enabled = false },
-            deleted = { enabled = false },
-        },
-        filetype = {
-            custom_colors = false,
-            enabled = false,
-        },
-        separator = { left = "▎", right = "" },
-        modified = { button = "●" },
-        pinned = { button = "車", filename = true, separator = { right = "" } },
-        alternate = { filetype = { enabled = false } },
-        current = { buffer_index = false },
-        inactive = { button = "" },
-        visible = { modified = { buffer_number = false } },
     },
-    insert_at_end = false,
-    insert_at_start = false,
-    maximum_padding = 1,
-    minimum_padding = 1,
-    maximum_length = 45,
-    semantic_letters = true,
-    -- sidebar_filetypes = {
-    --     NvimTree = true,
-    --     undotree = { text = "undotree" },
-    --     ["neo-tree"] = { event = "BufWipeout" },
-    --     Outline = { event = "BufWinLeave", text = "symbols-outline" },
-    -- },
-    letters = "asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP",
+    highlights = {
+        buffer_selected = { italic = false },
+        diagnostic_selected = { italic = false },
+        hint_selected = { italic = false },
+        pick_selected = { italic = false },
+        pick_visible = { italic = false },
+        pick = { italic = false },
+    },
 }
