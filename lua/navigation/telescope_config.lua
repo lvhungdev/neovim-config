@@ -14,5 +14,6 @@ require("telescope").setup({
                 ["<esc>"] = actions.close,
             },
         },
+        borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
     },
 })
