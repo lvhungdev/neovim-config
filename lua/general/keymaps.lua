@@ -68,7 +68,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 --- Git
 keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)
-keymap("n", "<leader>gb", ":Gitsigns blame_line<CR>", opts)
+keymap("n", "<leader>gl", ":Gitsigns blame_line<CR>", opts)
 keymap("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", opts)
 keymap("n", "<leader>gR", ":Gitsigns reset_buffer<CR>", opts)
 
