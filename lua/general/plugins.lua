@@ -21,7 +21,7 @@ require("lazy").setup({
 
     -- UI
     { "Mofiqul/vscode.nvim",    lazy = true },
-    { "mcchrish/zenbones.nvim", lazy = true, dependencies = { "rktjmp/lush.nvim" } },
+    { "catppuccin/nvim",        lazy = true },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,

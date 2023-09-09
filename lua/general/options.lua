@@ -1,5 +1,5 @@
 vim.cmd("set background=dark")
-vim.cmd("colorscheme vscode") -- set colorscheme
+vim.cmd("colorscheme catppuccin") -- set colorscheme
 vim.opt.backup = false             -- creates a backup file
 vim.opt.clipboard = "unnamedplus"  -- allows neovim to access the system clipboard
 vim.opt.conceallevel = 0           -- so that `` is visible in markdown files
@@ -33,5 +33,3 @@ vim.opt.sidescrolloff = 8
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 vim.opt.laststatus=3
-
-vim.g.barbar_auto_setup = false -- disable auto-setup for barbar.nvim
