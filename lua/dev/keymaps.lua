@@ -52,3 +52,6 @@ keymap('n', '<F11>', function() dap.step_into() end)
 keymap('n', '<F12>', function() dap.step_out() end)
 keymap('n', '<Leader>db', function() dap.toggle_breakpoint() end)
 keymap('n', '<Leader>du', function() require('dapui').toggle() end)
+
+keymap('n', ']g', ":Gitsigns next_hunk<CR>", opts)
+keymap('n', '[g', ":Gitsigns prev_hunk<CR>", opts)

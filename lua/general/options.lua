@@ -11,6 +11,7 @@ vim.opt.pumheight = 10             -- pop up menu height
 -- vim.opt.showtabline = 2                         -- always show tabs
 vim.opt.smartcase = true           -- smart case
 vim.opt.smartindent = true         -- make indenting smarter again
+vim.opt.autoindent = true          -- copy indent from current line when starting a new line
 vim.opt.splitbelow = true          -- force all horizontal splits to go below current window
 vim.opt.splitright = true          -- force all vertical splits to go to the right of current window
 vim.opt.swapfile = false           -- creates a swapfile

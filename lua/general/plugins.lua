@@ -106,5 +106,5 @@ require("lazy").setup({
         "RRethy/vim-illuminate",
         config = function() require("illuminate").configure(require("dev/highlight")) end,
     },
-    -- { "github/copilot.vim" },
+    { "github/copilot.vim" },
 })
