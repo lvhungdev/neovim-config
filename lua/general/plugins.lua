@@ -20,8 +20,12 @@ require("lazy").setup({
     },
 
     -- UI
-    { "Mofiqul/vscode.nvim",    lazy = true },
-    { "catppuccin/nvim",        lazy = true },
+    { "Mofiqul/vscode.nvim",  lazy = true },
+    {
+        "catppuccin/nvim",
+        lazy = true,
+        config = function() require("catppuccin").setup(require("ui/colorscheme")) end,
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
