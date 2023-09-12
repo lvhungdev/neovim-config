@@ -1,1 +1,1 @@
-require "ui/border"
+require "ui/highlights"

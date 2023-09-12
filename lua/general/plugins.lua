@@ -20,7 +20,11 @@ require("lazy").setup({
     },
 
     -- UI
-    { "Mofiqul/vscode.nvim",  lazy = true },
+    {
+        "Mofiqul/vscode.nvim",
+        lazy = true,
+        config = function() require("vscode").setup(require("ui/colorscheme")) end,
+    },
     {
         "catppuccin/nvim",
         lazy = true,
@@ -43,10 +47,8 @@ require("lazy").setup({
         "petertriho/nvim-scrollbar",
         config = function() require("scrollbar").setup(require("ui/scroll_bar")) end,
     },
-    {
-        "stevearc/dressing.nvim",
-        config = function() require("dressing").setup({}) end,
-    },
+    { "stevearc/dressing.nvim" },
+    { "RRethy/vim-illuminate" },
 
     -- Navigation
     {
@@ -105,10 +107,6 @@ require("lazy").setup({
     {
         "numToStr/Comment.nvim",
         config = function() require("Comment").setup({}) end,
-    },
-    {
-        "RRethy/vim-illuminate",
-        config = function() require("illuminate").configure(require("dev/highlight")) end,
     },
     { "github/copilot.vim" },
 })
