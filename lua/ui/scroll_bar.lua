@@ -113,6 +113,7 @@ return {
         "prompt",
         "TelescopePrompt",
         "noice",
+        "NvimTree",
     },
     autocmd = {
         render = {
