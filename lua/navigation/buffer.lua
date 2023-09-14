@@ -9,6 +9,8 @@ return {
                 text_align = "center"
             }
         },
+        sort_by = "insert_after_current",
+        persist_buffer_sort = false,
     },
     highlights = {
         buffer_selected = { italic = false },

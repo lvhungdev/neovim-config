@@ -13,11 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- General
-    {
-        "echasnovski/mini.surround",
-        version = "*",
-        config = function() require("mini.surround").setup({}) end,
-    },
+    { "tpope/vim-surround" },
 
     -- UI
     {
