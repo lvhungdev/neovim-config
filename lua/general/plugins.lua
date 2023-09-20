@@ -69,7 +69,7 @@ require("lazy").setup({
     },
     {
         "ggandor/leap.nvim",
-        config = function() require("leap").add_default_mappings() end,
+        -- config = function() require("leap").add_default_mappings() end,
     },
 
     -- Dev
