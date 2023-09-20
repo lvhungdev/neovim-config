@@ -14,13 +14,14 @@
 -- }
 
 -- vscode
--- local colors = require("vscode.colors").get_colors()
+local colors = require("vscode.colors").get_colors()
 return {
     color_overrides = {
         -- vscLineNumber = '#FFFFFF',
     },
     group_overrides = {
-        -- Cursor = { fg = colors.vscDarkBlue, bg = colors.vscLightGreen, bold = true },
-        -- IlluminatedWordText = { bg = colors.vscDarkBlue },
+        Comment = { fg = colors.vscGray },
+        SpecialComment = { fg = colors.vscGray },
+        ['@comment'] = { fg = colors.vscGray },
     }
 }

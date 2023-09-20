@@ -67,6 +67,10 @@ require("lazy").setup({
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function() require("navigation/telescope_config") end,
     },
+    {
+        "ggandor/leap.nvim",
+        config = function() require("leap").add_default_mappings() end,
+    },
 
     -- Dev
     { "neovim/nvim-lspconfig" },
