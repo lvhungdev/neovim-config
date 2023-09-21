@@ -19,29 +19,29 @@ require("lazy").setup({
     {
         "Mofiqul/vscode.nvim",
         lazy = true,
-        config = function() require("vscode").setup(require("ui/colorscheme")) end,
+        config = function() require("vscode").setup(require("ui.colorscheme")) end,
     },
     {
         "catppuccin/nvim",
         lazy = true,
-        config = function() require("catppuccin").setup(require("ui/colorscheme")) end,
+        config = function() require("catppuccin").setup(require("ui.colorscheme")) end,
     },
     {
         "nvim-treesitter/nvim-treesitter",
-        config = function() require("nvim-treesitter.configs").setup(require("ui/treesitter")) end,
+        config = function() require("nvim-treesitter.configs").setup(require("ui.treesitter")) end,
     },
     {
         "lukas-reineke/indent-blankline.nvim",
-        opts = require("ui/indentation")
+        opts = require("ui.indentation")
     },
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function() require("ui/statusline") end,
+        config = function() require("ui.statusline") end,
     },
     {
         "petertriho/nvim-scrollbar",
-        config = function() require("scrollbar").setup(require("ui/scroll_bar")) end,
+        config = function() require("scrollbar").setup(require("ui.scroll_bar")) end,
     },
     { "stevearc/dressing.nvim" },
     { "RRethy/vim-illuminate" },
@@ -50,7 +50,7 @@ require("lazy").setup({
     {
         "nvim-tree/nvim-tree.lua",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function() require("nvim-tree").setup(require("navigation/file-tree")) end,
+        config = function() require("nvim-tree").setup(require("navigation.file-tree")) end,
     },
     {
         "akinsho/bufferline.nvim",
@@ -59,17 +59,17 @@ require("lazy").setup({
             "nvim-tree/nvim-web-devicons",
             "ojroques/nvim-bufdel",
         },
-        opts = require("navigation/buffer"),
+        opts = require("navigation.buffer"),
     },
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.1",
         dependencies = { "nvim-lua/plenary.nvim" },
-        config = function() require("navigation/telescope_config") end,
+        config = function() require("navigation.telescope_config") end,
     },
     {
         "ggandor/leap.nvim",
-        -- config = function() require("leap").add_default_mappings() end,
+        config = function() require("navigation.leap-config") end,
     },
 
     -- Dev
@@ -97,7 +97,7 @@ require("lazy").setup({
     },
     {
         "lewis6991/gitsigns.nvim",
-        config = function() require("gitsigns").setup(require("dev/git")) end,
+        config = function() require("gitsigns").setup(require("dev.git")) end,
     },
     { "akinsho/toggleterm.nvim" },
     {
