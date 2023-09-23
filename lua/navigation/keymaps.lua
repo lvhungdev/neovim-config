@@ -12,9 +12,16 @@ local keymap = vim.keymap.set
 
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
-keymap('n', '<leader>f', ":Telescope find_files<cr>", opts)
-keymap('n', '<leader>w', ":Telescope live_grep<cr>", opts)
-keymap('n', '<leader>ld', ":Telescope diagnostics<cr>", opts)
+keymap("n", "<leader>f", ":Telescope find_files<cr>", opts)
+keymap("n", "<leader>w", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>ld", ":Telescope diagnostics<cr>", opts)
 
-keymap("n", "s", "<Plug>(leap-forward-to)", { silent = true })
-keymap("n", "S", "<Plug>(leap-backward-to)", { silent = true })
+keymap("n", "s", function()
+    local current_window = vim.fn.win_getid()
+    require('leap').leap({ target_windows = { current_window } })
+end)
+
+keymap("x", "s", function()
+    local current_window = vim.fn.win_getid()
+    require('leap').leap({ target_windows = { current_window } })
+end)
