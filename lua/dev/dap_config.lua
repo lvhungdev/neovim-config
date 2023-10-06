@@ -1,39 +1,54 @@
 local dap = require("dap")
 
-dap.adapters.codelldb = {
-    type = "server",
-    port = "${port}",
-    executable = {
-        command = "/home/lvhu/.local/share/nvim/mason/packages/codelldb/codelldb",
-        args = { "--port", "${port}" },
-        -- On windows you may have to uncomment this:
-        -- detached = false,
+dap.adapters.cppdbg = {
+    id = "cppdbg",
+    type = "executable",
+    command = "C:/Users/lvhu/dev/sdk/cpptools/extension/debugAdapters/bin/OpenDebugAD7.exe",
+    options = {
+        detached = false
     }
 }
 
-dap.configurations.rust = {
-    {
-        name = "Launch file",
-        type = "codelldb",
-        request = "launch",
-        program = function()
-            return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug/", "file")
-        end,
-        cwd = "${workspaceFolder}",
-        stopOnEntry = false,
-    },
+dap.adapters.coreclr = {
+    type = "executable",
+    command = "C:/Users/lvhu/AppData/Local/nvim-data/mason/packages/netcoredbg/netcoredbg/netcoredbg.exe",
+    args = { "--interpreter=vscode" }
 }
 
 dap.configurations.cpp = {
     {
         name = "Launch file",
-        type = "codelldb",
+        type = "cppdbg",
         request = "launch",
+        MIMode = "gdb",
+        miDebuggerPath = "C:/msys64/mingw64/bin/gdb.exe",
+        setupCommands = {
+            {
+                description = "Enable pretty-printing for gdb",
+                text = "-enable-pretty-printing",
+                ignoreFailures = true
+            },
+            {
+                description = "Set Disassembly Flavor to Intel",
+                text = "-gdb-set disassembly-flavor intel",
+                ignoreFailures = true
+            } },
         program = function()
             return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/build/", "file")
         end,
         cwd = "${workspaceFolder}/build/",
         stopOnEntry = false,
+    },
+}
+
+dap.configurations.cs = {
+    {
+        type = "coreclr",
+        name = "Launch",
+        request = "launch",
+        program = function()
+            return vim.fn.input("Path to dll", vim.fn.getcwd() .. "/bin/Debug/", "file")
+        end,
     },
 }
 
