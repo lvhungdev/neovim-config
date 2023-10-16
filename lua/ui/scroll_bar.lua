@@ -114,6 +114,8 @@ return {
         "TelescopePrompt",
         "noice",
         "NvimTree",
+        "cmp_docs",
+        "cmp_menu",
     },
     autocmd = {
         render = {
@@ -138,7 +140,7 @@ return {
         diagnostic = true,
         gitsigns = true, -- Requires gitsigns
         handle = true,
-        search = false,   -- Requires hlslens
-        ale = false,      -- Requires ALE
+        search = false,  -- Requires hlslens
+        ale = false,     -- Requires ALE
     },
 }
