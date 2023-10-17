@@ -1,27 +1,30 @@
--- Catppuccin
+-- vscode
+-- local colors = require("vscode.colors").get_colors()
 -- return {
---     highlight_overrides = {
---         all = function(colors)
---             return {
---                 NvimTreeGitNew = { fg = colors.green },
---             }
---         end,
---     },
 --     color_overrides = {
---         all = {
---         },
+--         -- vscLineNumber = '#FFFFFF',
 --     },
+--     group_overrides = {
+--         Comment = { fg = colors.vscGray },
+--         SpecialComment = { fg = colors.vscGray },
+--         ['@comment'] = { fg = colors.vscGray },
+--     }
 -- }
 
--- vscode
-local colors = require("vscode.colors").get_colors()
+-- bamboo
 return {
-    color_overrides = {
-        -- vscLineNumber = '#FFFFFF',
+    -- style = 'multiplex',
+    highlights = {
+        Comment             = { fg = '$grey' },
+        SpecialComment      = { fg = '$grey' },
+        ['@comment']        = { fg = '$grey' },
+        NormalFloat         = { bg = '#1c1e1b' },
+        -- NvimTreeFolderName       = { fg = '#f1e9d2' },
+        -- NvimTreeOpenedFolderName = { fg = '#f1e9d2' },
+        NvimTreeVertSplit   = { bg = '$grey' },
+        ['@parameter']      = { fmt = 'none' },
     },
-    group_overrides = {
-        Comment = { fg = colors.vscGray },
-        SpecialComment = { fg = colors.vscGray },
-        ['@comment'] = { fg = colors.vscGray },
-    }
+    code_style = {
+        conditionals = 'none',
+    },
 }

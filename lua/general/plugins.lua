@@ -22,9 +22,9 @@ require("lazy").setup({
         config = function() require("vscode").setup(require("ui.colorscheme")) end,
     },
     {
-        "catppuccin/nvim",
+        "ribru17/bamboo.nvim",
         lazy = true,
-        config = function() require("catppuccin").setup(require("ui.colorscheme")) end,
+        opts = require("ui.colorscheme"),
     },
     {
         "nvim-treesitter/nvim-treesitter",

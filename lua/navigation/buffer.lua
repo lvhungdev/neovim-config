@@ -11,6 +11,9 @@ return {
         },
         sort_by = "insert_after_current",
         persist_buffer_sort = false,
+        indicator = {
+            style = 'none'
+        },
     },
     highlights = {
         buffer_selected = { italic = false },

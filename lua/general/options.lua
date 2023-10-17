@@ -1,5 +1,5 @@
 vim.cmd("set background=dark")
-vim.cmd("colorscheme vscode") -- set colorscheme
+vim.cmd("colorscheme bamboo") -- set colorscheme
 vim.opt.backup = false             -- creates a backup file
 vim.opt.clipboard = "unnamedplus"  -- allows neovim to access the system clipboard
 vim.opt.conceallevel = 0           -- so that `` is visible in markdown files
