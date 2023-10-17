@@ -18,6 +18,14 @@ lspconfig.tsserver.setup({})
 
 lspconfig.clangd.setup({})
 
+lspconfig.bicep.setup({
+    cmd = { "dotnet", "C:/Users/lvhu/dev/sdk/bicep-langserver/Bicep.LangServer.dll" },
+})
+
+lspconfig.omnisharp.setup {
+    cmd = { "dotnet", "C:/Users/lvhu/AppData/Local/nvim-data/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+}
+
 -- Temp fix for encoding between null-ls and clangd
 local notify = vim.notify
 vim.notify = function(msg, ...)
