@@ -6,7 +6,8 @@ return {
             {
                 filetype = "NvimTree",
                 text = "File Explorer",
-                text_align = "center"
+                text_align = "center",
+                separator = true,
             }
         },
         sort_by = "insert_after_current",
@@ -22,5 +23,6 @@ return {
         pick_selected = { italic = false },
         pick_visible = { italic = false },
         pick = { italic = false },
+        offset_separator = { bg = '#1c1e1b' },
     },
 }

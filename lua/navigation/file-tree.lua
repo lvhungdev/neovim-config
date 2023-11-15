@@ -38,6 +38,8 @@ return {
         indent_markers = {
             enable = false,
         },
+        full_name = true,
+        special_files = {},
         icons = {
             show = {
                 file = true,
